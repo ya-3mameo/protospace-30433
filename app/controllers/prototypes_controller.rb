@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
+  before_action :authenticate_user!
   before_action :move_to_index,  only: [:edit, :update, :destroy]
 
 
@@ -45,6 +45,8 @@ class PrototypesController < ApplicationController
     redirect_to root_path
   end
 
+  def comments
+  end
 
   private
   def prototype_params
